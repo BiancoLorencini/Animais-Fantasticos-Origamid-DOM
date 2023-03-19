@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Animais Fantásticos</title>
 </head>
 
@@ -14,14 +17,13 @@
         <ul>
             <li><a href="#animais">Animais</a></li>
             <li><a href="#faq">Faq</a></li>
-            <li><a href="#contato"></a>Contato</li>
-            <li><a href="https://github.com/BiancoLorencini">Dev <img
-                        src="img/seta-girada-para-a-direita-com-linha-quebrada.png" width="10" alt="seta"></a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li class="devImg"><a href="https://github.com/BiancoLorencini">Dev &#62;</a></li>
         </ul>
     </nav>
     <section class="grid-section animais" id="animais">
-        <h1 class="titulo">Animais Fantáasticos</h1>
-        <ul>
+        <h1 class="titulo">Animais Fantásticos</h1>
+        <ul class="animais-lista">
             <li>
                 <img src="img/imagem1.jpg">
             </li>
@@ -171,8 +173,8 @@
         </div>
     </section>
     <section class="grid-section faq" id="faq">
-        <h3>FAQ</h3>
-        <dl>
+        <h3 class="titulo">FAQ</h3>
+        <dl class="faq-lista">
             <dt>Qual a idade dos animais?</dt>
             <dd>
                 As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte

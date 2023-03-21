@@ -233,7 +233,6 @@ body {
 
 .js-tabcontent section.ativo {
   display: block !important;
-  
   animation: show .7s forwards;
 }
 
@@ -246,6 +245,10 @@ body {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+.js-accordion dt {
+  cursor: pointer;
 }
 
 .js-accordion dd {

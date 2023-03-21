@@ -23,8 +23,8 @@ initTabNav();
 
 function initAccordion() {
   const accordionList = document.querySelectorAll(".js-accordion dt");
-  const activeClass = "ativo"
-  if(accordionList.length) {
+  const activeClass = "ativo";
+  if (accordionList.length) {
     accordionList[0].classList.add(activeClass);
     accordionList[0].nextElementSibling.classList.add(activeClass);
 
@@ -39,3 +39,28 @@ function initAccordion() {
   }
 }
 initAccordion();
+
+function initScrollSmooth() {
+  const internLinks = document.querySelectorAll(".js-menu a[href^='#']");
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = this.getAttribute("href");
+    const section = document.querySelector(href);
+    section.scrollIntoView({
+      behavior: "smooth",
+    });
+    // Forma alternativa
+    // const topo = section.offsetTop
+    // window.scrollTo({
+    //   top: topo,
+    //   behavior: "smooth",
+    // })
+  }
+
+  internLinks.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+}
+
+initScrollSmooth()

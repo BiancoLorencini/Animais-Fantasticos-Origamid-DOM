@@ -9,6 +9,7 @@ const menuList = document.querySelector("[data-menu='list']");
 
 function openMenu(event) {
   menuList.classList.add("active");
+  menuButton.classList.add("active");
 }
 
 menuButton.addEventListener("click", openMenu);

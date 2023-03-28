@@ -1,0 +1,57 @@
+[data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 797px) {
+  [data-menu="button"] {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: .7rem 1.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+  }
+  [data-menu="button"]::before {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 12px;
+    background: #fff;
+    box-shadow: 0 4px #fff, 0 -4px #fff;
+    margin-right: 10px;
+    transition: transform .3s ease;
+  }
+
+  [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
+  #menu {
+    display: none;
+    position: absolute;
+    background: #fb5;
+    width: 160px;
+    z-index: 200;
+    top: 0;
+    padding: 60px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .3);
+  }
+
+  #menu.active {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+  }
+};

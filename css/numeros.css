@@ -1,0 +1,19 @@
+.numeros-grid {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.numeros-grid h3 {
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.numeros-grid span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #e54;
+}

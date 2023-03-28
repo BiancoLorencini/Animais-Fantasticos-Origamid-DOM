@@ -8,6 +8,8 @@ export default function initAnimationScroll() {
         const sectionTop = section.getBoundingClientRect().top - halfWindow;
         if (sectionTop < 0) {
           section.classList.add("ativo");
+        } else {
+          section.classList.remove("ativo");
         }
       });
     }

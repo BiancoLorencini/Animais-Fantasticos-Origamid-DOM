@@ -7,7 +7,7 @@
     display: flex;
     background: #222;
     border: none;
-    padding: .7rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 4px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +28,7 @@
     background: #fff;
     box-shadow: 0 4px #fff, 0 -4px #fff;
     margin-right: 10px;
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
   }
 
   [data-menu="button"].active::before {
@@ -43,15 +43,27 @@
     z-index: 200;
     top: 0;
     padding: 60px 0 20px 0;
-    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
   }
 
   #menu.active {
     display: block;
+    animation: rightMenu 0.5s forwards;
+  }
+
+  @keyframes rightMenu {
+    from {
+      opacity: 0;
+      transform: translate3d(-10px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .dropdown-menu {
     position: static;
     border: none;
   }
-};
+} ;

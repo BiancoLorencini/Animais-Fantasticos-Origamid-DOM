@@ -293,3 +293,19 @@ body {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+[data-semana]::after {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #e54;
+  border-radius: 50%;
+  margin-left: 4px;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 1px white;
+}
+
+[data-semana].aberto::after {
+  background: rgb(129, 228, 129);
+}

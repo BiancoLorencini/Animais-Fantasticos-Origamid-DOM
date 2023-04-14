@@ -7,6 +7,7 @@ export default function initMenuMobile() {
 
   if (menuButton) {
     function openMenu(event) {
+      event.preventDefault();
       menuList.classList.add("active");
       menuButton.classList.add("active");
       outsideClick(menuList, events, () => {
